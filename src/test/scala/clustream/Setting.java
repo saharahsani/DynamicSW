@@ -1,7 +1,7 @@
 package clustream;
 
 public class Setting {
-    static String snapsPath = "src/test/resources/snaps";
+    static String snapsPath = "/sahar/snaps";
     static int k = 5;
     static int h = 1;
     static int numPoints = 5000;

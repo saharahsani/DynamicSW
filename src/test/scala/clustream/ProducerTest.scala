@@ -40,19 +40,19 @@ object ProducerTest extends  App() {
 
   var kafkaProducer = new KafkaProducer[String, String](properties)
   val fileName0 = "src/test/resources/ScaledKdd.txt"
-  val fileName = "src/test/resources/kddCup.csv"
+  val fileName = "/sahar/kddCup.csv"
   val fileName1 = "src/test/resources/kdd_MinMax_OnlyNumeric.txt"
   val fileName2 = "src/test/resources/minMaxExport.txt"
   val fileName3 = "src/test/resources/zScore_normalize.txt"
-  val fileName4="src/test/resources/powersupply.csv"
+  val fileName4="/sahar/powersupply.csv"
   val fileName5="src/test/resources/ShuffleDataset.csv"
   val fileName6="src/test/resources/scaledCovtype.csv"
-  val fileName7="src/test/resources/covtype.csv"
+  val fileName7="/sahar/covtype.csv"
   val fileName8="src/test/resources/kdd_minus2.csv"
   val fileName11="src/test/resources/NSLKDD.csv"
   val fileName12="src/test/resources/powerLbl.csv"
-  val fileName13="src/test/resources/RBF2.csv"
-  val fileName14="src/test/resources/RBF100.csv"
+  val fileName13="/sahar/RBF2.csv"
+  val fileName14="/sahar/RBF100.csv"
 
   try {
     var i = 0

@@ -78,7 +78,7 @@ private[clustream] class PrintClustersListener(clustream: CluStream, sc: SparkCo
       if (tc >= Setting.centersStartNum) {
         // online phase centers
        //  OnlineCenters.getCentersPyramidal(clustream, Setting.snapsPath,tc,Setting.windowTime)
-       OnlineCenters.getCenters(clustream, Setting.snapsPath, tc)
+       //OnlineCenters.getCenters(clustream, Setting.snapsPath, tc)
 
       }
 

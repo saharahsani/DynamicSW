@@ -3,8 +3,6 @@ package clustream
 import org.apache.log4j.{Level, LogManager, Logger}
 import org.apache.spark.{SparkConf, SparkContext}
 
-import java.io.File
-import java.nio.file.{Files, Paths}
 import java.time.{Duration, Instant}
 import scala.collection.mutable.ListBuffer
 import scala.reflect.io.Path
@@ -36,7 +34,8 @@ object OfflineCenters {
       println(s"-------------  execution time${tc}: ${durationStep} ms  ---------------")
     }
     if (clusters != null) {
-      clusters.foreach(c => Path(s"${Setting.centersOfflinePath}/centers${tc}").createFile().appendAll(c.toArray.mkString("", ",", "") + s"_${Setting.runNumber}" + "\n"))
+
+    //  clusters.foreach(c => Path(s"${Setting.centersOfflinePath}/centers${tc}").createFile().appendAll(c.toArray.mkString("", ",", "") + s"_${Setting.runNumber}" + "\n"))
 
     }
   }
@@ -57,11 +56,11 @@ object OfflineCenters {
     val log = LogManager.getRootLogger
     log.setLevel(Level.INFO)
 
-    val dirPath = Paths.get(s"${Setting.centersOfflinePath}")
+   /* val dirPath = Paths.get(s"${Setting.centersOfflinePath}")
     val directory = new File(dirPath.toString)
     if (!directory.exists()) {
       Files.createDirectories(dirPath)
-    }
+    }*/
     val clustream = new CluStream(null)
 
     for (tc <- startNum to loopEndNum) {
